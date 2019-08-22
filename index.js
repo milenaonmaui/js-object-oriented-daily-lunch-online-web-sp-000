@@ -48,7 +48,7 @@ class Customer{
      }); 
     }
     totalSpent(){
-
+        return this.meals().reduce()
     }
 }
 
