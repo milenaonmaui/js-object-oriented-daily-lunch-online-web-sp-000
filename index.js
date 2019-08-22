@@ -44,7 +44,7 @@ class Customer{
 
 class Meal {
     constructor(title, price){
-        this.title = tilte;
+        this.title = title;
         this.price = price;
         this.id = ++mealId;
         store.meals.push(this);
