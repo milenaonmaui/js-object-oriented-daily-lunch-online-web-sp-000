@@ -29,7 +29,7 @@ class Neighborhood {
         return delivery.meal();
       })
       
-      
+      return [...new Set(allMeals)]
     }
 }
 
