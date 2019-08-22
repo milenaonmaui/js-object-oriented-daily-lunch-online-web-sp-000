@@ -48,8 +48,8 @@ class Customer{
      }); 
     }
     totalSpent(){
-        return this.meals().reduce(function (total, currValue) {
-          return total + currValue;}, 0);
+        return this.meals().reduce(function (total, meal) {
+          return total + mael.price;}, 0);
     }
 }
 
