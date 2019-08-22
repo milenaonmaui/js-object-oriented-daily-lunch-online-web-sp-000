@@ -43,7 +43,9 @@ class Customer{
       });
     }
     meals() {
-        
+        return this.deliveries().map(delivery => {
+        return delivery.meal();
+     }); 
     }
     totalSpent(){
 
@@ -64,9 +66,9 @@ class Meal {
     }
     
     customers() {
-      return store.customers.filter(customer => {
-        return customer.neighborhoodId == this.id;
-      });
+     return this.deliveries().map(delivery => {
+        return delivery.meal();
+     });
     }
     byPrice() {
 
