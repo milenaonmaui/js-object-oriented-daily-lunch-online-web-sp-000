@@ -37,8 +37,10 @@ class Customer{
         store.customers.push(this);
     }
 
-    deliveries(){
-
+    deliveries() {
+      return store.deliveries.filter(delivery => {
+        return delivery.customerId == this.id;
+      });
     }
     meals() {
         
@@ -57,7 +59,7 @@ class Meal {
     }
     deliveries() {
       return store.deliveries.filter(delivery => {
-        return delivery.neighborhoodId == this.id;
+        return delivery.mealId == this.id;
       });
     }
     
