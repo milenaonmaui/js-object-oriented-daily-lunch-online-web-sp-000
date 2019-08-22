@@ -12,12 +12,18 @@ class Neighborhood {
         this.id = ++neighborhoodId;
         store.neighborhoods.push(this);
     }
-    deliveries(){
-
+   deliveries() {
+      return store.deliveries.filter(delivery => {
+        return delivery.neighborhoodId == this.id;
+      });
     }
-    customers(){
-
+    
+    customers() {
+      return store.customers.filter(customer => {
+        return customer.neighborhoodId == this.id;
+      });
     }
+    
     meals(){
 
     }
@@ -50,10 +56,15 @@ class Meal {
         store.meals.push(this);
     }
     deliveries() {
-        
+      return store.deliveries.filter(delivery => {
+        return delivery.neighborhoodId == this.id;
+      });
     }
-    customers() {
     
+    customers() {
+      return store.customers.filter(customer => {
+        return customer.neighborhoodId == this.id;
+      });
     }
     byPrice() {
 
